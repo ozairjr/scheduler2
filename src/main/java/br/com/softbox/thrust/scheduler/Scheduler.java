@@ -38,9 +38,9 @@ public class Scheduler {
 		this.threads.add(worker);
 	}
 
-	public void timeSchedule(String script, String[] time) {
+	public void timeSchedule(String script, String[] time, boolean now) {
 		SchedulerWorkerThread worker = getSchedulerWorker();
-		worker.timeSchedule(script, time);
+		worker.timeSchedule(script, time, now);
 		this.threads.add(worker);
 	}
 
