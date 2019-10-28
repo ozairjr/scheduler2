@@ -123,9 +123,9 @@ exports = {
 }
 ```
 
-O atributo de entrada `schedulerTask` da função da tarefa contém o método/função `cancel()`, que é utlizado para cancelar a *continuedade* do agendador de executar a tarefa.
+O parâmetro de entrada `schedulerTask` contém o método/função `cancel()`, que é utlizado para cancelar a *continuidade* do agendador de executar a tarefa.
 
-O exemplo [task02.js](src/test/thrust/task02.js):
+Veja o exemplo [task02.js](src/test/thrust/task02.js):
 
 ```js
 const resource = {
@@ -140,6 +140,5 @@ exports = (schedulerTask) => {
 }
 ```
 
-nos apresenta um caso em que uma tarefa é executada umas 5 vezes; e depois disto, informamos ao agendador que a
-tarefa poderá ser removida do agendador (ao chamarmos a função `schedulerTask.cancel()`). Logo, esta não será mais executada
-pelo agendador, podendo outra tarefa ser agendada em seu lugar.
+Aqui vemos um caso em que uma tarefa é executada umas 5 vezes; e depois disto, informamos ao agendador que a
+tarefa poderá ser removida do agendador, por chamarmos a função `schedulerTask.cancel()`). Logo, a tarefa deste *script* não será mais executada pelo agendador; podendo outra tarefa ser agendada em seu lugar.
